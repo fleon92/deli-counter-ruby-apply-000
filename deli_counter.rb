@@ -14,16 +14,17 @@ def line(katz_deli)
     katz_deli.each_with_index do |customer, index|
     current_line.push( "#{index + 1}. #{customer}")
     end
-    puts "The line is currently: " + current_line.join(" ")
+    puts "The line is currently: " + current_line.join(", ")
   end
 end
 
 # This method takes the primary array and the name of the customer and adds it to the array! Afterwards, we get a helpful greeting using string interpolation.
 # After we use .length to assess their place in line. .length returns a value based on how many elements are in the array. Perfect, as we're only worrying about the newest customer (the last one!).
-
-  def take_a_number(katz_deli, number)
-    katz_deli.push(number)
-    puts "You are number #{katz_deli.length} in line."
+counter = 0
+  def take_a_number(katz_deli)
+    counter += 1
+    katz_deli.push(counter)
+    puts "You are number #{counter} in line."
   end
   
 # This method calls out the next person in line (the first in the array) by using string interpolation. Afterwards, it removes them as they are now "served"! If nobody is in line with this method is called, a message lets us know.
