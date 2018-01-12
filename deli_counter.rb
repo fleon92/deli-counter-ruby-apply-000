@@ -9,7 +9,7 @@ katz_deli = []
 def line(katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
-  end
+  else
     puts "The line is currently: " + katz_deli.join(", ")
   end
 end
